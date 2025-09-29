@@ -1,0 +1,9 @@
+<p>list-with-resource-http-signal works!</p>
+
+@for(post of posts.value(); track post.id) {
+  <p>{{post.id}} {{post.title}}</p>
+}
+
+@if(posts.error()) {
+  <p>There was an error: {{posts.error()}}</p>
+}

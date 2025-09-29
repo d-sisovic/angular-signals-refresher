@@ -5,10 +5,11 @@ import { map, of, timer } from 'rxjs';
 import { ListWithSignalInput } from "../list-with-signal-input/list-with-signal-input";
 import { ListWith2WayModel } from "../list-with-2-way-model/list-with-2-way-model";
 import { RouterOutlet } from "@angular/router";
+import { ListWithResourceHttpSignal } from "../list-with-resource-http-signal/list-with-resource-http-signal";
 
 @Component({
   selector: 'app-list',
-  imports: [AsyncPipe, ListWithSignalInput, ListWith2WayModel, RouterOutlet],
+  imports: [AsyncPipe, ListWithSignalInput, ListWith2WayModel, RouterOutlet, ListWithResourceHttpSignal],
   templateUrl: './list.html',
   styleUrl: './list.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
