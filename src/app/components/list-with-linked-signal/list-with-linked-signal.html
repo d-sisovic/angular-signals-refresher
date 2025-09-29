@@ -1,0 +1,7 @@
+<p>linked signal:</p>
+
+@for(item of linkedSignalExample(); track item.name) {
+<p>{{item.name}}</p>
+}
+
+<button (click)="onChangeLinkedSignal()">Clear linked signal</button>
