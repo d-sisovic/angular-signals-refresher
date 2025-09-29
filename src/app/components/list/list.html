@@ -1,0 +1,20 @@
+@for(item of filteredList(); let index = $index; track index) {
+<p>{{item.name}}</p>
+}
+
+<p>test signal from observable: {{testSignalFromObservable()}}</p>
+
+<p>time observable: {{longPollingObservable$ | async}}</p>
+
+<p>time signal: {{longPollingSignal()}}</p>
+
+<app-list-with-signal-input [items]="listItems()"></app-list-with-signal-input>
+
+<app-list-with-2-way-model [(inputModelItem)]="inputModelItemParent"></app-list-with-2-way-model>
+
+<p>This comes from the child 2-way-model: {{inputModelItemParent()}}</p>
+
+<button (click)="onAddNewUser()">Add new user</button>
+
+
+<router-outlet></router-outlet>
