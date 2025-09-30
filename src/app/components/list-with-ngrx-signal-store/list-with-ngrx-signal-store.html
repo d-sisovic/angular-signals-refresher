@@ -1,0 +1,15 @@
+<p>list-with-ngrx-signal-store works!</p>
+
+<p>{{usersStore.users() | json}}</p>
+
+{{ usersStore.isLoading$ | async }}
+
+{{ usersStore.selectedUser() }}
+
+<p>Users count: {{usersStore.usersCount()}}</p>
+
+<button (click)="onAddNewUser()">Add new user to store</button>
+
+<button (click)="usersStore.addSingleUserFromHttp()">Add new user to store from Promise</button>
+
+<button (click)="usersStore.loadByObservable()">Load user by observable</button>

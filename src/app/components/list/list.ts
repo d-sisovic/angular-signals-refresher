@@ -7,10 +7,11 @@ import { ListWith2WayModel } from "../list-with-2-way-model/list-with-2-way-mode
 import { RouterOutlet } from "@angular/router";
 import { ListWithResourceHttpSignal } from "../list-with-resource-http-signal/list-with-resource-http-signal";
 import { ListWithLinkedSignal } from "../list-with-linked-signal/list-with-linked-signal";
+import { ListWithNgrxSignalStore } from "../list-with-ngrx-signal-store/list-with-ngrx-signal-store";
 
 @Component({
   selector: 'app-list',
-  imports: [AsyncPipe, ListWithSignalInput, ListWith2WayModel, RouterOutlet, ListWithResourceHttpSignal, ListWithLinkedSignal],
+  imports: [AsyncPipe, ListWithSignalInput, ListWith2WayModel, RouterOutlet, ListWithResourceHttpSignal, ListWithLinkedSignal, ListWithNgrxSignalStore],
   templateUrl: './list.html',
   styleUrl: './list.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
